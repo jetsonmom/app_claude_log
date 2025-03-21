@@ -3,6 +3,7 @@
 
 
 AndroidManifest.xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
    xmlns:tools="http://schemas.android.com/tools">
@@ -31,17 +32,18 @@ AndroidManifest.xml
 
 
 </manifest>
-
+```
 build.gradle(Log)
-
+```
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
 alias(libs.plugins.android.application) apply false
    alias(libs.plugins.kotlin.android) apply false
    alias(libs.plugins.kotlin.compose) apply false
 }
-
+```
 MainActivity.java
+```
 package com.example.log; // 패키지명을 실제 프로젝트의 패키지명과 일치시키세요
 
 
@@ -104,8 +106,11 @@ public class MainActivity extends AppCompatActivity {
        });
    }
 }
+```
 
 res/drawable/ leaf_shape_background.xml
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
    android:shape="oval">
@@ -119,8 +124,9 @@ res/drawable/ leaf_shape_background.xml
        android:right="10dp"
        android:top="10dp" />
 </shape>
-
+```
 res/drawable/oval_button_blue.xml
+```
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
    android:shape="oval">
@@ -131,8 +137,10 @@ res/drawable/oval_button_blue.xml
        android:right="10dp"
        android:top="10dp" />
 </shape>
-
+```
 res/layout/activity_main.xml  res에서 새로 만들 때 리소스 선택
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
    xmlns:tools="http://schemas.android.com/tools"
@@ -212,8 +220,10 @@ res/layout/activity_main.xml  res에서 새로 만들 때 리소스 선택
 
 
 </RelativeLayout>
-
+```
 values/color.xml
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <color name="purple_200">#FFBB86FC</color>
@@ -226,22 +236,26 @@ values/color.xml
 
 
 </resources>
-
+```
 values//ic_launcher_background.xml
 
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
+```
 
 values/themes.xml
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
    <style name="Theme.Log" parent="Theme.AppCompat.Light.NoActionBar">
        <!-- 필요한 경우 여기에 추가 테마 속성을 넣을 수 있습니다 -->
    </style>
 </resources>
-
+```
 
 
 2번째 페이지
@@ -285,6 +299,8 @@ Mac: Command + 4
 Shift를 두 번 연속 눌러서 검색 창을 열고 "Device File Explorer"를 입력하세요.
 안드로이드 스튜디오 버전에 따라 위치가 다를 수 있으니, 여러 방법을 시도해 보세요. 모든 방법을 시도해도 찾을 수 없다면, 안드로이드 스튜디오를 업데이트해야 할 수도 있습니다.
 SeedDetailActivity.java
+
+```
 package com.example.log;
 
 
@@ -387,9 +403,11 @@ public class SeedDetailActivity extends AppCompatActivity {
        }
    }
 }
+```
 
 activity_seed_detail.xml
 
+```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
    xmlns:tools="http://schemas.android.com/tools"
@@ -464,10 +482,11 @@ activity_seed_detail.xml
        android:scaleType="centerCrop"
        android:background="#DDDDDD"
        android:contentDescription="식물 사진" />
-
+```
 
 </RelativeLayout>
 
+```
 green_button_background.xml
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
@@ -480,9 +499,11 @@ green_button_background.xml
        android:right="10dp"
        android:top="10dp" />
 </shape>
-
+```
 
 orange_oval_background.xml
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
    android:shape="oval">
@@ -493,10 +514,12 @@ orange_oval_background.xml
        android:right="10dp"
        android:top="10dp" />
 </shape>
-
+```
 
 
 activity_seed_detail.xml
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
    xmlns:tools="http://schemas.android.com/tools"
@@ -571,13 +594,15 @@ activity_seed_detail.xml
        android:scaleType="centerCrop"
        android:background="#DDDDDD"
        android:contentDescription="식물 사진" />
-
+```
 
 </RelativeLayout>
 
 
 기존 파일 수정:
 MainActivity.java: Seed 버튼 클릭 시 SeedDetailActivity로 이동하도록 수정
+
+```
 package com.example.log;
 
 
@@ -645,9 +670,11 @@ public class MainActivity extends AppCompatActivity {
        });
    }
 }
-
+```
 
 AndroidManifest.xml: SeedDetailActivity를 등록하고 갤러리 접근 권한 추가
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
    xmlns:tools="http://schemas.android.com/tools">
@@ -688,4 +715,4 @@ AndroidManifest.xml: SeedDetailActivity를 등록하고 갤러리 접근 권한 
 
 </manifest>
 
-
+```
